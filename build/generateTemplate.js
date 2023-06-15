@@ -13,7 +13,7 @@ function generateTemplate(entry) {
   return files.map(filename => new HtmlWebpackPlugin({
     template: path.resolve(templatePath, filename),
     filename,
-    chunks: [filename.split('.')[0]]
+    chunks: ['common', filename.split('.')[0]]
   }));
 }
 
